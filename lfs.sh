@@ -35,5 +35,8 @@ export PATH="$LFS/tools/bin:$PATH"
 # source download.sh
 
 # compile packages
-source packageinstall.sh 5 binutils
+# source packageinstall.sh 5 binutils
+# source packageinstall.sh 5 gcc
+ source packageinstall.sh 5 linux
+# source packageinstall.sh 5 glibc
 

@@ -1,8 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 CHAPTER="$1"
 PACKAGE="$2"
 
-cat packages.csv | grep -i "$PACKAGE" | while read line; do
+cat packages.csv | grep -i "^$PACKAGE" | while read line; do
     str=( $line )
     FILENAME=${str[0]}
     DIRNAME=${str[1]}
