@@ -21,3 +21,6 @@ wget --input-file=$LFS/sources/wget-list-systemd --continue --directory-prefix=$
 pushd $LFS/sources
     md5sum -c md5sums
 popd
+
+rm -rf $LFS/sources/md5sum
+rm -rf $LFS/sources/wget-list-systemd
