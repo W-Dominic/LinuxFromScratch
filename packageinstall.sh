@@ -2,10 +2,13 @@
 CHAPTER="$1"
 PACKAGE="$2"
 
-cat test.csv | while read line; do
+cat packages.csv | grep -i "$PACKAGE" | while read line; do
     str=( $line )
     FILENAME=${str[0]}
     DIRNAME=${str[1]}
+
+    #echo "$FILENAME"
+    #echo "$DIRNAME"
 
     mkdir -pv "$DIRNAME"
     
