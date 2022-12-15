@@ -28,5 +28,8 @@ case $(uname -m) in
 esac
 
 # download neccessary packages
-source download.sh "$LFS"
+source download.sh
+
+# compile packages
+source packageinstall.sh
 
