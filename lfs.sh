@@ -27,9 +27,13 @@ case $(uname -m) in
     x86_64) mkdir -pv $LFS/lib64 ;; #check if 64 bit
 esac
 
+cp -rf *.sh chapter* packages.csv test.csv "$LFS/sources"
+cd "$LFS/sources"
+export PATH="$LFS/tools/bin:$PATH"
+
 # download neccessary packages
-source download.sh
+# source download.sh
 
 # compile packages
-source packageinstall.sh
+source packageinstall.sh 5 binutils
 
