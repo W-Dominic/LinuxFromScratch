@@ -27,3 +27,6 @@ case $(uname -m) in
     x86_64) mkdir -pv $LFS/lib64 ;; #check if 64 bit
 esac
 
+# download neccessary packages
+source download.sh "$LFS"
+
